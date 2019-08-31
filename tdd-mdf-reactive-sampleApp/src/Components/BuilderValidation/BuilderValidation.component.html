@@ -1,0 +1,21 @@
+<form [formGroup]="userForm"  class="form-register">
+  <h2 class="mt-5">Kayıt ol</h2>
+  <div class="form-group">
+    <input type="text" id="name" name="name" formControlName="name" class="form-control" placeholder="Adı "
+      autofocus>
+    <span class="help-block" *ngIf="userForm.get('name').hasError('required') && userForm.get('name').touched">
+      Name adi gerekli
+    </span>
+  </div>
+  <div class="form-group">
+    <input type="text" id="surname" name="surname" formControlName="surname" class="form-control" placeholder="Soyadi">
+    <span class="help-block" *ngIf="userForm.get('surname').hasError('required') && userForm.get('surname').touched">
+      Surname adı gerekli
+    </span>
+  
+
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" [disabled]="!userForm.valid" type="submit">Register</button>
+ 
+</form>

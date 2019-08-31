@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "../tdd-mdf-reactive-sampleApp/node_modules/bootswatch/dist/solar/bootstrap.min.css"
             ],
             "scripts": []
           },
